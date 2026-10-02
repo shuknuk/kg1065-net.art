@@ -1,0 +1,105 @@
+html {
+  background-color: #d9d9d9;
+}
+
+body {
+  margin: 0;
+  color: #111111;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#world {
+  width: 5200px;
+  min-height: 3600px;
+  padding: 80px;
+  background-color: #eeeeee;
+  background-image: linear-gradient(#eeeeee 95%, #d7d7d7 95%);
+  background-size: 100% 140px;
+}
+
+.card {
+  width: 650px;
+  padding: 36px;
+  margin-bottom: 180px;
+  border: 4px solid #111111;
+  background-color: #ffffff;
+  box-shadow: 14px 14px 0 #111111;
+}
+
+.card h1 {
+  font-size: 54px;
+  margin-top: 12px;
+  margin-bottom: 22px;
+}
+
+.card h2 {
+  font-size: 38px;
+  margin-top: 0;
+}
+
+.card p {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.small {
+  font-size: 18px !important;
+  color: #555555;
+}
+
+.instruction {
+  font-weight: bold;
+  background-color: #fff3a6;
+  padding: 14px;
+}
+
+.tab-icon {
+  width: 84px;
+  height: 84px;
+}
+
+.search-one {
+  margin-left: 900px;
+}
+
+.rabbit-hole {
+  margin-left: 2100px;
+  background-color: #dff4ff;
+}
+
+.search-two {
+  margin-left: 3900px;
+  background-color: #f3e5ff;
+}
+
+.forgotten {
+  margin-left: 2900px;
+  background-color: #ffe6e6;
+}
+
+.search-three {
+  margin-left: 600px;
+  background-color: #e8ffe5;
+}
+
+.almost {
+  margin-left: 3500px;
+  background-color: #fff0c7;
+}
+
+.end {
+  margin-left: 4450px;
+  margin-bottom: 300px;
+  background-color: #111111;
+  color: #ffffff;
+}
+
+.end a {
+  color: #fff3a6;
+  font-size: 22px;
+}
+
+.last-line {
+  font-weight: bold;
+  font-size: 30px !important;
+}

@@ -10,11 +10,9 @@ body {
 
 #world {
   width: 5200px;
-  min-height: 3600px;
+  height: 4200px;
   padding: 80px;
   background-color: #eeeeee;
-  background-image: linear-gradient(#eeeeee 95%, #d7d7d7 95%);
-  background-size: 100% 140px;
 }
 
 .card {
@@ -23,27 +21,26 @@ body {
   margin-bottom: 180px;
   border: 4px solid #111111;
   background-color: #ffffff;
-  box-shadow: 14px 14px 0 #111111;
 }
 
-.card h1 {
+h1 {
   font-size: 54px;
   margin-top: 12px;
   margin-bottom: 22px;
 }
 
-.card h2 {
+h2 {
   font-size: 38px;
   margin-top: 0;
 }
 
-.card p {
+p {
   font-size: 24px;
   line-height: 1.5;
 }
 
 .small {
-  font-size: 18px !important;
+  font-size: 18px;
   color: #555555;
 }
 
@@ -101,5 +98,5 @@ body {
 
 .last-line {
   font-weight: bold;
-  font-size: 30px !important;
+  font-size: 30px;
 }

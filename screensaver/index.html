@@ -1,31 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b1020">
-  <title>Idle Hours | CSS Screensaver</title>
+  <title>Idle Hours</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <input class="motion-toggle" type="checkbox" id="motion" aria-label="Keep screensaver moving">
-  <label class="motion-control" for="motion">Keep moving</label>
-  <main class="screen" tabindex="0" aria-label="Idle Hours, an animated screensaver of drifting windows">
-    <div class="grain" aria-hidden="true"></div>
-    <div class="halo halo-one" aria-hidden="true"></div>
-    <div class="halo halo-two" aria-hidden="true"></div>
-    <div class="orbit orbit-one" aria-hidden="true"><span></span></div>
-    <div class="orbit orbit-two" aria-hidden="true"><span></span></div>
-    <div class="orbit orbit-three" aria-hidden="true"><span></span></div>
-    <div class="window window-one" aria-hidden="true"><div class="window-bar"><i></i><i></i><i></i></div><div class="window-content"><div class="sun"></div><div class="horizon"></div></div></div>
-    <div class="window window-two" aria-hidden="true"><div class="window-bar"><i></i><i></i><i></i></div><div class="window-content lines"><span></span><span></span><span></span><span></span></div></div>
-    <div class="window window-three" aria-hidden="true"><div class="window-bar"><i></i><i></i><i></i></div><div class="window-content waves"><b></b><b></b><b></b></div></div>
-    <div class="message">
-      <p class="eyebrow">SOMEWHERE BETWEEN TABS</p>
-      <h1>Idle Hours<span class="cursor" aria-hidden="true">_</span></h1>
-      <p class="subtitle">Nothing needs your attention right now.</p>
+  <div class="screen">
+    <div class="window sunset">
+      <div class="bar">o o o</div>
+      <div class="sun"></div>
+      <div class="ground"></div>
     </div>
-    <p class="footer">HOVER OR TAB INTO THE SCENE TO START <span aria-hidden="true">✳</span> CHECK KEEP MOVING TO LET IT RUN</p>
-  </main>
+
+    <div class="window notes">
+      <div class="bar">o o o</div>
+      <div class="line"></div>
+      <div class="line short"></div>
+      <div class="line"></div>
+    </div>
+
+    <div class="window circles">
+      <div class="bar">o o o</div>
+      <div class="circle"></div>
+      <div class="circle pink"></div>
+      <div class="circle"></div>
+    </div>
+
+    <div class="title">
+      <h1>Idle Hours</h1>
+      <p>Three windows left open.</p>
+    </div>
+    <p class="instructions">Move your mouse onto the page to start the screensaver.</p>
+  </div>
 </body>
 </html>

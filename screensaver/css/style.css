@@ -1,58 +1,158 @@
-:root{color-scheme:dark;font-family:'Space Grotesk',system-ui,sans-serif}
-*{box-sizing:border-box}
-html,body{width:100%;min-height:100%;margin:0}
-body{overflow:hidden;background:#0b1020;color:#f7edda}
-.screen{position:relative;isolation:isolate;width:100vw;height:100vh;height:100dvh;overflow:hidden;background:radial-gradient(ellipse at 48% 38%,#29365a 0%,#151d34 38%,#0b1020 76%)}
-.grain{position:absolute;inset:0;z-index:12;pointer-events:none;opacity:.18;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E")}
-.halo{position:absolute;border-radius:50%;filter:blur(4px);pointer-events:none;animation:breathe 12s ease-in-out infinite alternate}
-.halo-one{width:65vw;height:65vw;left:-25vw;top:-35vw;background:radial-gradient(circle,rgba(241,146,113,.23),transparent 66%)}
-.halo-two{width:60vw;height:60vw;right:-27vw;bottom:-34vw;background:radial-gradient(circle,rgba(107,179,201,.21),transparent 70%);animation-delay:-5s}
-.message{position:absolute;z-index:5;top:43%;left:50%;width:min(90%,640px);transform:translate(-50%,-50%);text-align:center;pointer-events:none}
-.eyebrow,.footer{font:500 clamp(.56rem,.85vw,.72rem) 'DM Mono',monospace;letter-spacing:.21em}
-.eyebrow{color:#e6aa90}
-h1{margin:.15em 0 .02em;font-weight:500;font-size:clamp(4rem,10vw,9.5rem);line-height:1.08;letter-spacing:-.08em;text-shadow:0 8px 48px #0b1020}
-.cursor{color:#f4aa8c;animation:blink 1.35s steps(1,end) infinite}
-.subtitle{margin:1em 0;color:#bbbfd3;font-size:clamp(.86rem,1.6vw,1.1rem)}
-.footer{position:absolute;z-index:10;bottom:2rem;width:100%;padding:0 1rem;text-align:center;color:#8e97b4;line-height:2}
-.footer span{padding:0 .4em;color:#eeaa91}
-.window{position:absolute;z-index:4;overflow:hidden;width:clamp(130px,18vw,280px);height:clamp(105px,15vw,205px);border:1px solid rgba(255,255,255,.26);border-radius:12px;background:rgba(187,194,229,.10);box-shadow:0 25px 60px rgba(4,7,20,.43),inset 0 1px rgba(255,255,255,.25);backdrop-filter:blur(13px);-webkit-backdrop-filter:blur(13px);transition:filter .45s,border-color .45s,box-shadow .45s;animation:float 13s ease-in-out infinite alternate}
-.window:hover{filter:brightness(1.35);border-color:#f5cfb8;box-shadow:0 30px 90px rgba(249,159,126,.23);animation-play-state:paused}
-.window-one{top:12%;left:10%;transform:rotate(-12deg);animation-delay:-3s}
-.window-two{top:10%;right:12%;transform:rotate(11deg);animation-delay:-8s;animation-duration:16s}
-.window-three{bottom:14%;left:22%;transform:rotate(8deg);animation-delay:-5s;animation-duration:17s}
-.window-bar{display:flex;align-items:center;gap:5px;padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.15)}
-.window-bar i{width:6px;height:6px;border-radius:50%;background:#e8ab94;opacity:.8}
-.window-bar i:nth-child(2){background:#e9ca93}.window-bar i:nth-child(3){background:#8ec7b9}
-.window-content{position:relative;height:calc(100% - 27px);overflow:hidden}
-.sun{position:absolute;width:65px;height:65px;left:50%;top:13%;transform:translateX(-50%);border-radius:50%;background:#f9ad8e;box-shadow:0 0 35px #f9ad8e77;animation:breathe 5s ease-in-out infinite alternate}
-.horizon{position:absolute;bottom:-25%;left:-20%;width:140%;height:60%;border-radius:50% 50% 0 0;background:linear-gradient(135deg,#8a94d0,#404c86);animation:horizon 9s ease-in-out infinite alternate}
-.lines{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:13px;padding:22px}
-.lines span{height:6px;width:85%;border-radius:6px;background:#8ad7d0;opacity:.65;animation:pulse 5s ease-in-out infinite alternate}
-.lines span:nth-child(2){width:55%;background:#ffc9a2;animation-delay:-1s}.lines span:nth-child(3){width:75%;animation-delay:-2s}.lines span:nth-child(4){width:38%;background:#ffc9a2;animation-delay:-3s}
-.waves{display:flex;align-items:center;justify-content:center;gap:14px}
-.waves b{height:50%;width:14%;border-radius:50%;border:4px solid #aeb6f4;transform:rotate(22deg);animation:wave 4s ease-in-out infinite alternate}
-.waves b:nth-child(2){animation-delay:-1.3s;border-color:#f3aa94}.waves b:nth-child(3){animation-delay:-2.6s;border-color:#9dd2c5}
-.orbit{position:absolute;z-index:1;width:35vw;height:35vw;border:1px solid rgba(205,198,234,.10);border-radius:50%;animation:spin 45s linear infinite;pointer-events:none}
-.orbit span{position:absolute;top:10%;left:14%;height:7px;width:7px;border-radius:50%;background:#e5a48d;box-shadow:0 0 17px #e5a48d}
-.orbit-one{top:25%;left:30%}.orbit-two{width:68vw;height:68vw;left:15%;top:-18%;animation-direction:reverse;animation-duration:70s}.orbit-three{width:95vw;height:95vw;left:0;top:-35%;animation-duration:95s}
-@keyframes float{to{translate:0 -35px}}
-@keyframes blink{50%{opacity:0}}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes breathe{to{opacity:.48;scale:1.12}}
-@keyframes horizon{to{translate:0 -12px;scale:1.06}}
-@keyframes pulse{to{opacity:1;scale:.75 1}}
-@keyframes wave{to{transform:rotate(-25deg) scaleY(.7)}}
-@media(max-width:650px){.window-one{left:-5%;top:12%}.window-two{right:-7%;top:22%}.window-three{left:25%;bottom:13%}.message{top:50%}.footer{bottom:1.25rem}.orbit{width:90vw;height:90vw}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
 
-/* The scene rests until hover, keyboard focus, or the persistent checkbox triggers it. */
-.screen *{animation-play-state:paused}
-.screen:hover *,.screen:focus-visible *,#motion:checked ~ .screen *{animation-play-state:running}
-.screen:hover .window:hover{animation-play-state:paused}
-.screen{transition:filter .8s ease;filter:saturate(.45)}
-.screen:hover,.screen:focus-visible,#motion:checked ~ .screen{filter:saturate(1)}
-.screen:focus-visible{outline:2px solid #f5cfb8;outline-offset:-6px}
-.motion-toggle{position:fixed;z-index:20;left:1.5rem;top:1.6rem;accent-color:#f5cfb8;width:18px;height:18px}
-.motion-control{position:fixed;z-index:20;left:3.2rem;top:1.55rem;font:14px/24px monospace;color:#f7edda;cursor:pointer}
-.motion-toggle:focus-visible + .motion-control{outline:2px solid #f5cfb8;outline-offset:5px}
-@media(prefers-reduced-motion:reduce){.screen{filter:saturate(1)}}
+body {
+  background-color: #111827;
+  color: #eee8da;
+  font-family: Arial, sans-serif;
+}
+
+.screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #111827;
+  transition: background-color 2s;
+}
+
+.screen:hover {
+  background-color: #26344d;
+}
+
+.title {
+  position: absolute;
+  top: 41%;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: normal;
+}
+
+.title p {
+  color: #bdc6d5;
+  font-size: 16px;
+}
+
+.instructions {
+  position: absolute;
+  bottom: 3%;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+}
+
+.window {
+  position: absolute;
+  width: 28%;
+  height: 22%;
+  overflow: hidden;
+  border: 2px solid #79859a;
+  border-radius: 10px;
+  background-color: #344158;
+}
+
+.bar {
+  position: relative;
+  z-index: 1;
+  padding: 6px;
+  border-bottom: 1px solid #79859a;
+  color: #e1ae9b;
+  font-size: 12px;
+}
+
+.sunset {
+  top: 12%;
+  left: 8%;
+}
+
+.notes {
+  top: 12%;
+  right: 8%;
+}
+
+.circles {
+  bottom: 13%;
+  left: 36%;
+}
+
+.sun {
+  position: absolute;
+  top: 35%;
+  left: 38%;
+  width: 24%;
+  height: 35%;
+  border-radius: 50%;
+  background-color: #e1ae9b;
+}
+
+.ground {
+  position: absolute;
+  bottom: -15%;
+  width: 100%;
+  height: 45%;
+  border-radius: 50%;
+  background-color: #8794bc;
+}
+
+.line {
+  width: 75%;
+  height: 6px;
+  margin: 14px auto;
+  background-color: #abd3cd;
+}
+
+.short {
+  width: 45%;
+  background-color: #e1ae9b;
+}
+
+.circle {
+  display: inline-block;
+  width: 16%;
+  height: 38%;
+  margin: 8% 5%;
+  border: 2px solid #abd3cd;
+  border-radius: 50%;
+}
+
+.pink {
+  border-color: #e1ae9b;
+}
+
+.screen:hover .sunset {
+  animation: drift 8s ease-in-out infinite alternate;
+}
+
+.screen:hover .notes {
+  animation: drift 11s ease-in-out infinite alternate-reverse;
+}
+
+.screen:hover .circles {
+  animation: turn 7s ease-in-out infinite alternate;
+}
+
+@keyframes drift {
+  from {
+    transform: translate(0, 0) rotate(-6deg);
+  }
+  to {
+    transform: translate(0, 30px) rotate(6deg);
+  }
+}
+
+@keyframes turn {
+  from {
+    transform: rotate(-8deg);
+  }
+  to {
+    transform: rotate(8deg);
+  }
+}

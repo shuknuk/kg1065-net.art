@@ -1,0 +1,69 @@
+:root {
+  --paper: #f3efe6;
+  --ink: #172229;
+  --accent: #d34b38;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  align-items: center;
+  background: var(--paper);
+  color: var(--ink);
+  display: flex;
+  font-family: Georgia, "Times New Roman", serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+main {
+  border-top: 3px solid currentColor;
+  margin: 24px auto;
+  max-width: 680px;
+  padding: 18px 0 54px;
+  width: calc(100% - 48px);
+}
+
+.label, .note, button {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.label {
+  font-size: .8rem;
+  letter-spacing: .08em;
+  margin: 0 0 46px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(3.8rem, 12vw, 7rem);
+  font-weight: normal;
+  letter-spacing: -.08em;
+  line-height: .78;
+  margin: 0 0 52px;
+}
+
+#memory {
+  font-size: clamp(1.4rem, 4vw, 2.5rem);
+  line-height: 1.15;
+  margin: 0 0 34px;
+  max-width: 18ch;
+}
+
+button {
+  background: var(--ink);
+  border: 0;
+  color: var(--paper);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 14px 18px;
+}
+
+button:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+button:hover { background: var(--accent); }
+
+.note {
+  font-size: .8rem;
+  line-height: 1.4;
+  margin: 20px 0 0;
+}
